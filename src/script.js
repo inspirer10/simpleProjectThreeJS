@@ -7,7 +7,7 @@ import * as dat from 'dat.gui'
 const loader = new THREE.TextureLoader()
 const height = loader.load('heightTest.png')
 const texture = loader.load('/texture.jpg') //or textureTest
-const alpha = loader.load('/alpha.png')
+const alpha = loader.load('/unnamed.png')
 
 // Debug
 const gui = new dat.GUI()
@@ -19,7 +19,7 @@ const canvas = document.querySelector('canvas.webgl')
 const scene = new THREE.Scene()
 
 // Objects
-const geometry = new THREE.PlaneBufferGeometry(3, 3, 64, 64)
+const geometry = new THREE.PlaneBufferGeometry(3.2, 3.2, 64, 64)
 
 // Materials
 const material = new THREE.MeshStandardMaterial({
@@ -35,14 +35,14 @@ const plane = new THREE.Mesh(geometry, material)
 scene.add(plane)
 
 plane.rotation.x = 181
-gui.add(plane.rotation, 'x').min(0).max(600)
+gui.add(plane.rotation, 'x').min(0).max(370)
 
 // Mesh
 
 
 // Lights
 
-const pointLight = new THREE.PointLight( /*'#00b3ff'*/ '#280cff', 1.8)
+const pointLight = new THREE.PointLight( /*'#00b3ff'*/ '#280cff', 1.4)
 pointLight.position.x = .2
 pointLight.position.y = 10
 pointLight.position.z = 4.4
@@ -124,7 +124,7 @@ const tick = () => {
     // Update objects
     //sphere.rotation.y = .5 * elapsedTime
 
-    plane.rotation.z = .45 * elapsedTime;
+    plane.rotation.z = .4 * elapsedTime;
     plane.material.displacementScale = 0.3 + mouseY * 0.001;
 
     // Update Orbital Controls
