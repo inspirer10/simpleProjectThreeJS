@@ -1,8 +1,5 @@
 {
     "homepage": "http://inspirer10.github.io/simpleProjectThreeJS",
-    "name": "simpleProjectThreeJS",
-    "repository": "#",
-    "license": "MIT",
     "scripts": {
         "predeploy": "npm run build",
         "deploy": "gh -pages -d build",
