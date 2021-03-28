@@ -6,7 +6,7 @@ import * as dat from 'dat.gui'
 // Texture loader
 const loader = new THREE.TextureLoader()
 const height = loader.load('heightTest.png')
-const texture = loader.load('/texture.jpg') //or textureTest
+const texture = loader.load('/texture.jpg')
 const alpha = loader.load('/unnamed.png')
 
 // Debug
